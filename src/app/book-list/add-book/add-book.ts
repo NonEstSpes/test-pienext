@@ -4,7 +4,7 @@ import { MatOption, MatSelect } from '@angular/material/select';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Genre } from '@/app/model/genres';
 import { MatButton } from '@angular/material/button';
-import {RouterLink} from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-add-book',

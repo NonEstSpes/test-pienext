@@ -9,12 +9,15 @@ import { Subject, takeUntil } from 'rxjs';
 import { MatChip, MatChipSet } from '@angular/material/chips';
 import { MatButton } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
+import { MatFormField, MatInput, MatLabel } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatOption, MatSelect } from '@angular/material/select';
 
 @Component({
   selector: 'app-book-item-list',
   templateUrl: './book-list.html',
   styleUrl: './book-list.css',
-  imports: [MatCardModule, MatChipSet, MatButton, MatChip, RouterLink],
+  imports: [MatCardModule, MatChipSet, MatButton, MatChip, RouterLink, MatFormField, MatLabel, MatInput, FormsModule, MatOption, MatSelect, ReactiveFormsModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookList implements OnInit, OnDestroy {

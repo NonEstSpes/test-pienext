@@ -1,6 +1,21 @@
 <div class="book-list">
   @let books = books$$();
-  <button matButton routerLink="/add-book">Добавить книгу</button>
+  <div>
+    <form>
+      <mat-form-field>
+        <mat-label>Фильтр</mat-label>
+        <input matInput/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Тип фильтрации</mat-label>
+        <mat-select value="author">
+          <mat-option value="author">Автор</mat-option>
+          <mat-option value="name">Название</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+    <button matButton routerLink="/add-book">Добавить книгу</button>
+  </div>
   @if (books) { @for (book of books; track book.id) {
   <mat-card appearance="outlined">
     <mat-card-header>
