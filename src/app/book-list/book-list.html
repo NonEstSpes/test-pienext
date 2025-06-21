@@ -1,14 +1,14 @@
 <div class="book-list">
   @let books = books$$();
   <div>
-    <form>
+    <form [formGroup]="formFilter">
       <mat-form-field>
         <mat-label>Фильтр</mat-label>
-        <input matInput/>
+        <input matInput formControlName="filter" />
       </mat-form-field>
       <mat-form-field>
         <mat-label>Тип фильтрации</mat-label>
-        <mat-select value="author">
+        <mat-select value="author" formControlName="typeFilter">
           <mat-option value="author">Автор</mat-option>
           <mat-option value="name">Название</mat-option>
         </mat-select>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ENV, ENV_TOKEN } from '@/environments/environment.development';
 import { BehaviorSubject, Observable, Subject, tap } from 'rxjs';
 import { Book } from '@/app/model/book';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root',
@@ -19,5 +20,9 @@ export class BookService {
 
   public getAllBooks(): Observable<Book[]> {
     return this.http.get<Book[]>(`${this.env.apiUrl}/get_all_books`).pipe(tap(books => this.book$.next(books)));
+  }
+
+  public addBook(newBook: Book): Observable<Book> {
+    return this.http.post<Book>(`${this.env.apiUrl}/get_all_books`, newBook);
   }
 }

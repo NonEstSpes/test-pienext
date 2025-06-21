@@ -14,7 +14,7 @@
     </mat-form-field>
     <mat-form-field>
       <mat-label>Детальное описание</mat-label>
-      <textarea matInput formControlName="details"></textarea>
+      <textarea matInput formControlName="detailed_description"></textarea>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Год</mat-label>
@@ -33,6 +33,6 @@
       <input matInput formControlName="rating" />
     </mat-form-field>
   </form>
-  <button matButton [disabled]="!addBookForm.valid">Добавить</button>
+  <button matButton [disabled]="!addBookForm.valid" (click)="addBook()">Добавить</button>
   <button matButton routerLink="/">Назад</button>
 </div>
