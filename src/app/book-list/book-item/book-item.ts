@@ -24,7 +24,7 @@ import {MatChip, MatChipSet} from '@angular/material/chips';
 import {MatButton} from '@angular/material/button';
 
 @Component({
-  selector: 'app-book-item',
+  selector: 'app-book-item-item',
   imports: [MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle, MatChip, MatChipSet, MatCardActions, MatButton, RouterLink],
   templateUrl: './book-item.html',
   styleUrl: './book-item.css',

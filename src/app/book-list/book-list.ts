@@ -11,7 +11,7 @@ import {MatButton} from '@angular/material/button';
 import {RouterLink} from '@angular/router';
 
 @Component({
-  selector: 'app-book-list',
+  selector: 'app-book-item-list',
   templateUrl: './book-list.html',
   styleUrl: './book-list.css',
   imports: [MatCardModule, MatChipSet, MatButton, MatChip, RouterLink],
