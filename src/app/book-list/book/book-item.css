@@ -1,12 +1,17 @@
 .book-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  max-width: 400px;
+  max-width: 600px;
   gap: 16px;
 
   margin: 0 auto;
   height: 100%;
   padding: 16px;
+}
+
+.mat-mdc-card-title,
+.mat-mdc-card-subtitle,
+.mat-mdc-card-content {
+  color: white;
 }

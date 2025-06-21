@@ -11,10 +11,10 @@ export class BookService {
   private readonly http: HttpClient = inject(HttpClient);
   private readonly env: ENV = inject(ENV_TOKEN);
 
-  private readonly book$: BehaviorSubject<Book[]> = new BehaviorSubject<Book[]>([]);
+  private readonly book$: BehaviorSubject<Book[]> = new BehaviorSubject<Book[]>([])
 
   public get allBooks(): Observable<Book[]> {
-    return this.book$.asObservable();
+    return this.book$.asObservable()
   }
 
   public getAllBooks(): Observable<Book[]> {

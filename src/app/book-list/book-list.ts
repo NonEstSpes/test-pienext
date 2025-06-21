@@ -6,13 +6,15 @@ import { MatCardModule } from '@angular/material/card';
 import { Book } from '@/app/model/book';
 import { Subject, takeUntil } from 'rxjs';
 
-import { BookCard } from '@/app/book-list/book-card/book-card';
+import {MatChip, MatChipSet} from '@angular/material/chips';
+import {MatButton} from '@angular/material/button';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.html',
   styleUrl: './book-list.css',
-  imports: [MatCardModule, BookCard],
+  imports: [MatCardModule, MatChipSet, MatButton, MatChip, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookList implements OnInit, OnDestroy {
