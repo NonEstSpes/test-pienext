@@ -1,0 +1,13 @@
+.book-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 300px;
+  gap: 20px;
+}
+
+.mat-mdc-card-title,
+.mat-mdc-card-subtitle,
+.mat-mdc-card-content {
+  color: rgba(171, 228, 173, 0.63);
+}

@@ -1,6 +1,6 @@
 import {InjectionToken} from '@angular/core';
 
-interface ENV {
+export interface ENV {
   production: boolean;
   apiUrl: string
 }

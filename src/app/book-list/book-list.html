@@ -1,1 +1,19 @@
-<p>book-list works!</p>
+<div class="book-list">
+  @let books = books$$();
+  @if (books) {
+    @for (book of books; track book.id) {
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>{{book.name}}</mat-card-title>
+          <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{book.description}}</p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button matButton>Узнать больше</button>
+        </mat-card-actions>
+      </mat-card>
+    }
+  }
+</div>
