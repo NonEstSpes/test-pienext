@@ -6,9 +6,9 @@ import { MatCardModule } from '@angular/material/card';
 import { Book } from '@/app/model/book';
 import { Subject, takeUntil } from 'rxjs';
 
-import {MatChip, MatChipSet} from '@angular/material/chips';
-import {MatButton} from '@angular/material/button';
-import {RouterLink} from '@angular/router';
+import { MatChip, MatChipSet } from '@angular/material/chips';
+import { MatButton } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-book-item-list',

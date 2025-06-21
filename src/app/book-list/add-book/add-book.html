@@ -1,11 +1,38 @@
-<form [formGroup]="addBookForm">
-  <mat-form-field>
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
-  </mat-form-field>
-</form>
-
+<div class="add-book">
+  <form [formGroup]="addBookForm" class="add-form">
+    <mat-form-field>
+      <mat-label>Название</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Имя автора</mat-label>
+      <input matInput formControlName="author" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Описание</mat-label>
+      <input matInput formControlName="description" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Детальное описание</mat-label>
+      <textarea matInput formControlName="details"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Год</mat-label>
+      <input matInput formControlName="year" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Жанры</mat-label>
+      <mat-select formControlName="genre">
+        @for (genre of genres; let i = $index; track i) {
+        <mat-option [value]="genre">{{genre}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Рейтинг</mat-label>
+      <input matInput formControlName="rating" />
+    </mat-form-field>
+  </form>
+  <button matButton [disabled]="!addBookForm.valid">Добавить</button>
+  <button matButton routerLink="/">Назад</button>
+</div>
