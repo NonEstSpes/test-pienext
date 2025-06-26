@@ -9,6 +9,7 @@ To start a local development server, run:
 ```bash
 ng serve
 ```
+
 Помимо этого требуется запустить json-server для моковых данных, данной командой:
 
 ```bash

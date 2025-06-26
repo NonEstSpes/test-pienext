@@ -36,7 +36,7 @@ export class AddBook implements OnDestroy {
 
   protected addBook(): void {
     this.bookService
-      .addBook({ ...this.addBookForm.value, id: generateNumericUUID(16), genre: [this.addBookForm.value.genre]})
+      .addBook({ ...this.addBookForm.value, id: generateNumericUUID(16), genre: [this.addBookForm.value.genre] })
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
         alert('Книга успешно создана');

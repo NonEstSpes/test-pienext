@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, computed, inject, Signal, signal, WritableSignal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  effect,
+  inject,
+  Signal,
+  signal,
+  WritableSignal,
+} from '@angular/core';
 import { BookService } from '@/app/services/book.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
@@ -39,8 +48,8 @@ export class BookItem {
   private readonly idBook$$: WritableSignal<number> = signal(0);
   private readonly books$$: Signal<Book[] | undefined> = toSignal(this.bookService.allBooks);
 
-  protected readonly book$$: Signal<Book | undefined> = computed(() =>
-    this.books$$()?.find(book => book.id === this.idBook$$())
+  protected readonly book$$: Signal<Book | undefined> = computed(
+    () => this.books$$()?.find((book: Book): boolean => book.id == this.idBook$$()) // почему-то json-server стал отдавать id как string, поэтому тут не типизированная проверка
   );
 
   constructor(private activateRoot: ActivatedRoute) {
